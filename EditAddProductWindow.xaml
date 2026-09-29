@@ -1,0 +1,47 @@
+﻿<Window x:Class="HozMarketWareHouse.EditAddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HozMarketWareHouse"
+        mc:Ignorable="d"
+        Title="EditAddProductWindow" Height="550" Width="800">
+    <Grid>
+        <StackPanel Margin="20,15,20,14">
+            <TextBlock FontWeight="Bold">Название</TextBlock>
+            <TextBox x:Name="TB_Name"></TextBox>
+            <TextBlock FontWeight="Bold">Артикул</TextBlock>
+            <TextBox x:Name="TB_Article" PreviewTextInput="TB_Article_PreviewTextInput"></TextBox>
+            <TextBlock FontWeight="Bold">Цена</TextBlock>
+            <TextBox x:Name="TB_Price" PreviewTextInput="TB_Volume_PreviewTextInput"></TextBox>
+            <TextBlock FontWeight="Bold">Единица измерения</TextBlock>
+            <TextBox x:Name="TB_Unit"></TextBox>
+            <TextBlock FontWeight="Bold">Вес</TextBlock>
+            <TextBox x:Name="TB_Weight" PreviewTextInput="TB_Volume_PreviewTextInput"></TextBox>
+            <CheckBox FontWeight="Bold" x:Name="RB" Checked="RB_Checked_1" Unchecked="RB_Unchecked" >Это емкость?</CheckBox>
+            <StackPanel Visibility="Collapsed" Name="Panel_volume">
+                <TextBlock FontWeight="Bold">Литр</TextBlock>
+                <TextBox x:Name="TB_Volume" PreviewTextInput="TB_Volume_PreviewTextInput"></TextBox>
+            </StackPanel>
+            <TextBlock FontWeight="Bold">Бренд</TextBlock>
+            <TextBox x:Name="TB_Brand"></TextBox>
+            <TextBlock FontWeight="Bold">Категория</TextBlock>
+            <ComboBox  x:Name="CB_Category" SelectedIndex="0">
+                <ComboBoxItem>---</ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontWeight="Bold">Описание</TextBlock>
+            <TextBox  x:Name="TB_Description" TextWrapping="NoWrap" Height="73"></TextBox>
+            <TextBlock FontWeight="Bold">Фотография</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Btn_load" Click="Btn_load_Click" Width="107" Background="#FF8400" FontWeight="Bold" Foreground="White" Height="30">Загрузить</Button>
+                <TextBlock x:Name="TB_Image" Width="582" FontWeight="Bold"></TextBlock>
+            </StackPanel>
+            <Border Height="25"></Border>
+            <StackPanel Orientation="Horizontal" Height="31">
+                <Button  Width="150" Click="Button_Click" Background="#FF8400" FontWeight="Bold" Foreground="White">Сохранить</Button>
+                <Border Width="63"></Border>
+                <Button Width="150" Click="Button_Click_1" Background="#FF8400" FontWeight="Bold" Foreground="White">Выход</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

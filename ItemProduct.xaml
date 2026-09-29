@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="HozMarketWareHouse.ItemProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HozMarketWareHouse"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="800">
+    <Grid>
+        <Border BorderBrush="Black" CornerRadius="10" Background="{Binding BackgroundColorQuantity}" BorderThickness="1" Margin="2">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <StackPanel Width="150">
+                    <Image Source="{Binding FullPhoto}" Stretch="Uniform" Height="126" ></Image>
+                </StackPanel>
+                <StackPanel Width="380">
+
+                    <TextBlock Text="{Binding IdProduct}" FontWeight="Bold" x:Name="idProductText" Visibility="Collapsed"></TextBlock>
+                    <TextBlock Text="{Binding Name}" FontWeight="Bold"></TextBlock>
+                    <TextBlock Text="{Binding Price, StringFormat='Цена: {0}'}"></TextBlock>
+                    <TextBlock Text="{Binding Quantity, StringFormat='Количество в складе: {0}'}"></TextBlock>
+                    <TextBlock Text="{Binding Article, StringFormat='Артикул: {0}'}"></TextBlock>
+                    <TextBlock Text="{Binding StatusQuantity, StringFormat='Статус: {0}'}"></TextBlock>
+                    <TextBlock Text="{Binding Description, StringFormat='Описание: {0}'}" TextWrapping="Wrap" Height="44"></TextBlock>
+
+                </StackPanel>
+                <StackPanel Width="191" Height="50" Orientation="Horizontal">
+                    <Button Background="#FF8400" Width="50" FontSize="25" FontWeight="Bold" BorderBrush="Black" BorderThickness="0.5" Click="Button_Click">-</Button>
+                    <Border Width="20"/>
+                    <Button Background="#FF8400" Width="50" FontSize="15" FontWeight="Bold" BorderBrush="Black" BorderThickness="0.5" Click="Button_Click_2">✏️</Button>
+                    <Border Width="20"/>
+                    <Button Background="#FF8400" Width="50" FontSize="25" FontWeight="Bold" BorderBrush="Black" BorderThickness="0.5" Click="Button_Click_1">+</Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
